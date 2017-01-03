@@ -1,0 +1,660 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
+
+
+
+
+
+
+<meta name="description" content="Objective下班之后，花一个半小时，做第三遍rails 101，完成1-5节。
+Relective做第三次遍，感觉越来越熟练了，敲代码的速度也更快了，很有成就感。
+Interpretivegit 存档平时做项目时，经常会改很多很多东西，然后要提交git时才发现，怎么修改了这么多！！！经常搞不清楚到底哪个步骤修改了哪些文件，最终往往会写一句可能以后自己都看不懂的提交信息，草草了事。在练习rai">
+<meta property="og:type" content="article">
+<meta property="og:title" content="【总结】2016/12/08">
+<meta property="og:url" content="http://yoursite.com/2016/12/21/2016-12-08-coding-diary/index.html">
+<meta property="og:site_name" content="raimon's Blog">
+<meta property="og:description" content="Objective下班之后，花一个半小时，做第三遍rails 101，完成1-5节。
+Relective做第三次遍，感觉越来越熟练了，敲代码的速度也更快了，很有成就感。
+Interpretivegit 存档平时做项目时，经常会改很多很多东西，然后要提交git时才发现，怎么修改了这么多！！！经常搞不清楚到底哪个步骤修改了哪些文件，最终往往会写一句可能以后自己都看不懂的提交信息，草草了事。在练习rai">
+<meta property="og:updated_time" content="2016-12-21T02:27:55.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="【总结】2016/12/08">
+<meta name="twitter:description" content="Objective下班之后，花一个半小时，做第三遍rails 101，完成1-5节。
+Relective做第三次遍，感觉越来越熟练了，敲代码的速度也更快了，很有成就感。
+Interpretivegit 存档平时做项目时，经常会改很多很多东西，然后要提交git时才发现，怎么修改了这么多！！！经常搞不清楚到底哪个步骤修改了哪些文件，最终往往会写一句可能以后自己都看不懂的提交信息，草草了事。在练习rai">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: {"position":"right","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: '博主'
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2016/12/21/2016-12-08-coding-diary/"/>
+
+  <title> 【总结】2016/12/08 | raimon's Blog </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?5a52bbf51ff63e06bda0b7de1e08d341";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-right page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">raimon's Blog</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle"></p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                【总结】2016/12/08
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-12-21T10:26:48+08:00" content="2016-12-21">
+              2016-12-21
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/总结/" itemprop="url" rel="index">
+                    <span itemprop="name">总结</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="Objective"><a href="#Objective" class="headerlink" title="Objective"></a>Objective</h2><p>下班之后，花一个半小时，做第三遍rails 101，完成1-5节。</p>
+<h2 id="Relective"><a href="#Relective" class="headerlink" title="Relective"></a>Relective</h2><p>做第三次遍，感觉越来越熟练了，敲代码的速度也更快了，很有成就感。</p>
+<h2 id="Interpretive"><a href="#Interpretive" class="headerlink" title="Interpretive"></a>Interpretive</h2><h3 id="git-存档"><a href="#git-存档" class="headerlink" title="git 存档"></a>git 存档</h3><p>平时做项目时，经常会改很多很多东西，然后要提交git时才发现，怎么修改了这么多！！！经常搞不清楚到底哪个步骤修改了哪些文件，最终往往会写一句可能以后自己都看不懂的提交信息，草草了事。在练习rails101时，因为rails101的教程对项目进行了分解，每一个步骤对应一次commit，目标明确，循序渐进，写完一节就提交一节，所以我才发现，原来每次只做一件小事情，做好了就马上提交，一点都不会乱，这点我是学到了，很棒。</p>
+<h3 id="漏写了无数次的-“end”"><a href="#漏写了无数次的-“end”" class="headerlink" title="漏写了无数次的 “end”"></a>漏写了无数次的 “end”</h3><p>犯错误最多的就是忘了写end，所以我决定每次写if或者循环等语法时，先把end写了再说，养成一个好习惯。</p>
+<h3 id="慢慢地能默写了"><a href="#慢慢地能默写了" class="headerlink" title="慢慢地能默写了"></a>慢慢地能默写了</h3><p>已经做了两遍rails，在做第三遍时，已经比较熟练了，比较意外的是，竟然可以在看了教程的一句引导词之后，可以不看后面的步骤，自己把下一步给写出来了，比如说CRUD，这非常有成就感，真是熟能生巧呀。</p>
+<h3 id="情不自禁地和nodejs做比较"><a href="#情不自禁地和nodejs做比较" class="headerlink" title="情不自禁地和nodejs做比较"></a>情不自禁地和nodejs做比较</h3><p>平时学后端用nodejs，所以不自觉地会比较ruby on rails(RoR)和nodejs，最让我刚到惊讶的是，rails帮开发者做了很多很多事情，就拿路由来说，rails只需要在routes.rb写一句</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">resources :groups</span><br></pre></td></tr></table></figure>
+<p>它就能帮你生成7个Action</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">    groups GET    /groups(.<span class="symbol">:format</span>)              groups<span class="comment">#index</span></span><br><span class="line">           POST   /groups(.<span class="symbol">:format</span>)              groups<span class="comment">#create</span></span><br><span class="line"> new_group GET    /groups/new(.<span class="symbol">:format</span>)          groups<span class="comment">#new</span></span><br><span class="line">edit_group GET    /groups/<span class="symbol">:id/edit</span>(.<span class="symbol">:format</span>)     groups<span class="comment">#edit</span></span><br><span class="line">     group GET    /groups/<span class="symbol">:id</span>(.<span class="symbol">:format</span>)          groups<span class="comment">#show</span></span><br><span class="line">           PATCH  /groups/<span class="symbol">:id</span>(.<span class="symbol">:format</span>)          groups<span class="comment">#update</span></span><br><span class="line">           PUT    /groups/<span class="symbol">:id</span>(.<span class="symbol">:format</span>)          groups<span class="comment">#update</span></span><br><span class="line">           DELETE /groups/<span class="symbol">:id</span>(.<span class="symbol">:format</span>)          groups<span class="comment">#destroy</span></span><br><span class="line">      root GET    /                              groups<span class="comment">#index</span></span><br></pre></td></tr></table></figure>
+<p>如果用nodejs的框架koa来写的话，是需要一个一个手动定义的</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">router.get(<span class="string">'/'</span>, controller.getUser)</span><br><span class="line">router.post(<span class="string">'/'</span>, controller.addUser)</span><br><span class="line">router.put(<span class="string">'/'</span>, controller.updateUser)</span><br><span class="line">router.delete(<span class="string">'/:id'</span>, controller.destroy)</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
+<p>因为rails帮开发者做很多事情，所以开发者的开发效率会更高。</p>
+<p>另外，发现了一个node和RoR一个很相似的地方，那就是rails的<code>gemfile</code>和node的<code>package.json</code>，都是用来安装一些模块的，RoR的安装命令是<code>bundle install</code>，而node是<code>npm install</code>。</p>
+<h3 id="ApplicationRecord-和-ActiveRecord"><a href="#ApplicationRecord-和-ActiveRecord" class="headerlink" title="ApplicationRecord 和 ActiveRecord"></a>ApplicationRecord 和 ActiveRecord</h3><p>用rails创建model时，默认是长这个样子的</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Group</span> &lt; ApplicationRecord</span></span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
+<p>教程要求把<code>ApplicationRecord</code>改成<code>ActiveRecord::Base</code>，但是因为教程没有明说，所以我经常忘记。现在我还弄不清楚为什么要改成<code>ActiveRecord::Base</code>，所以先背起来再说。</p>
+<h3 id="良好的编程规范"><a href="#良好的编程规范" class="headerlink" title="良好的编程规范"></a>良好的编程规范</h3><p>rails提供的一些功能是有助于帮助程序员养成良好的习惯的，比如说</p>
+<ul>
+<li>html模板代码重复太多，冗余了把？用partial。</li>
+<li>很多请求都要先经过登录认证吧？用before_action。</li>
+<li>很多html模板都需要用到工具函数吧？用Helper。</li>
+<li>很多action里面都用到同一个函数吗？把它封装成函数，写在private里面。</li>
+</ul>
+<h3 id="做得越多，想写的东西就越多。"><a href="#做得越多，想写的东西就越多。" class="headerlink" title="做得越多，想写的东西就越多。"></a>做得越多，想写的东西就越多。</h3><p>一开始做的时候，感觉没有可以写，于是就偷懒没写学习日记，随着练习次数的增加，学到的东西越来越多，慢慢地就开始有很多东西可以写了，继续保持。</p>
+<h3 id="加入一个登录系统也太轻松了吧？"><a href="#加入一个登录系统也太轻松了吧？" class="headerlink" title="加入一个登录系统也太轻松了吧？"></a>加入一个登录系统也太轻松了吧？</h3><p>前阵子有nodejs开发一套登录系统，费力很大的劲，还算是比较复杂的，开发起来有点麻烦，而RoR可以直接使用devise模块，直接搞定登录系统，哇塞，太轻松了吧。</p>
+<h3 id="lt-gt-和-lt-gt"><a href="#lt-gt-和-lt-gt" class="headerlink" title="&lt;% %&gt; 和 &lt;%= %&gt;"></a>&lt;% %&gt; 和 &lt;%= %&gt;</h3><p>这两者经常搞混，虽然现在也没有彻底弄清楚，不过还是发现一些规律的，很多情况下，都用到<code>&lt;%= %&gt;</code>，比如说</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;h2&gt;&lt;%= @group.title %&gt;&lt;/h2&gt;</span><br><span class="line"></span><br><span class="line">&lt;%= link_to("Edit", edit_group_path(@group), class: "btn btn-primary pull-right") %&gt;</span><br><span class="line"></span><br><span class="line">&lt;%= f.input :title, input_html: &#123; class: "form-control"&#125; %&gt;</span><br><span class="line"></span><br><span class="line">&lt;%= render "common/navbar" %&gt;</span><br></pre></td></tr></table></figure>
+<p>而<code>&lt;% %&gt;</code>是用在一些判断或者遍历的关键词上面的，比如说</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;% <span class="keyword">if</span> current_user &amp;&amp; current_user == @group.user %&gt;</span><br><span class="line"></span><br><span class="line">&lt;% <span class="keyword">end</span> %&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;% @groups.each <span class="keyword">do</span> <span class="params">|group|</span> %&gt;</span><br><span class="line"></span><br><span class="line">&lt;% <span class="keyword">end</span> %&gt;</span><br></pre></td></tr></table></figure>
+<h2 id="Decisional"><a href="#Decisional" class="headerlink" title="Decisional"></a>Decisional</h2><p>放下之前无效的学习方式，摒弃傲慢的态度，一心一意按照教程的指示做，养成好的学习习惯，相信一定会有惊喜的。</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/12/21/2016-12-21-rails-console-error/" rel="next" title="【错误】在rails console中操作数据库报错">
+                <i class="fa fa-chevron-left"></i> 【错误】在rails console中操作数据库报错
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/12/21/2016-12-21-rails-101-extra-jobs/" rel="prev" title="rails 101 额外作业">
+                rails 101 额外作业 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.jpg"
+               alt="raimon" />
+          <p class="site-author-name" itemprop="name">raimon</p>
+          <p class="site-description motion-element" itemprop="description">终生学习者</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">38</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">12</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">15</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/raimonfuns" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/5224061111" target="_blank" title="Weibo">
+                  
+                    <i class="fa fa-fw fa-weibo"></i>
+                  
+                  Weibo
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Objective"><span class="nav-number">1.</span> <span class="nav-text">Objective</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Relective"><span class="nav-number">2.</span> <span class="nav-text">Relective</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Interpretive"><span class="nav-number">3.</span> <span class="nav-text">Interpretive</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#git-存档"><span class="nav-number">3.1.</span> <span class="nav-text">git 存档</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#漏写了无数次的-“end”"><span class="nav-number">3.2.</span> <span class="nav-text">漏写了无数次的 “end”</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#慢慢地能默写了"><span class="nav-number">3.3.</span> <span class="nav-text">慢慢地能默写了</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#情不自禁地和nodejs做比较"><span class="nav-number">3.4.</span> <span class="nav-text">情不自禁地和nodejs做比较</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ApplicationRecord-和-ActiveRecord"><span class="nav-number">3.5.</span> <span class="nav-text">ApplicationRecord 和 ActiveRecord</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#良好的编程规范"><span class="nav-number">3.6.</span> <span class="nav-text">良好的编程规范</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#做得越多，想写的东西就越多。"><span class="nav-number">3.7.</span> <span class="nav-text">做得越多，想写的东西就越多。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#加入一个登录系统也太轻松了吧？"><span class="nav-number">3.8.</span> <span class="nav-text">加入一个登录系统也太轻松了吧？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#lt-gt-和-lt-gt"><span class="nav-number">3.9.</span> <span class="nav-text"><% %> 和 <%= %></span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Decisional"><span class="nav-number">4.</span> <span class="nav-text">Decisional</span></a></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">raimon</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.0.1"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+  
+  
+  
+
+  
+
+  
+
+</body>
+</html>

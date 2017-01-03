@@ -1,0 +1,748 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
+
+
+
+
+
+
+<meta name="description" content="什么是函数式编程？首先说说什么是编程范式，它指的是计算机编程的基本风格或典范模式。打个比喻，如果说每个编程者都在创造一个虚拟世界，那么编程范式就是他们所采用的世界观和方法论。常见的编程范式有两种：面向过程编程（C）和面向对象编程（C++，JAVA）。
+函数式编程是一种编程范性，它有如下特点：
+
+函数是有确定性输出的（也就是维基百科上面所说的：避免使用程序状态以及易变对象）。
+使用函数进行编程（恩，">
+<meta property="og:type" content="article">
+<meta property="og:title" content="函数式编程">
+<meta property="og:url" content="http://yoursite.com/2016/09/24/2016-12-21-Functional_Programming/index.html">
+<meta property="og:site_name" content="raimon's Blog">
+<meta property="og:description" content="什么是函数式编程？首先说说什么是编程范式，它指的是计算机编程的基本风格或典范模式。打个比喻，如果说每个编程者都在创造一个虚拟世界，那么编程范式就是他们所采用的世界观和方法论。常见的编程范式有两种：面向过程编程（C）和面向对象编程（C++，JAVA）。
+函数式编程是一种编程范性，它有如下特点：
+
+函数是有确定性输出的（也就是维基百科上面所说的：避免使用程序状态以及易变对象）。
+使用函数进行编程（恩，">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/801b780ajw1f84lcsj027j20cl02bjrc.jpg">
+<meta property="og:image" content="http://ww2.sinaimg.cn/large/801b780ajw1f84lffn529j20ch07n74t.jpg">
+<meta property="og:image" content="http://ww3.sinaimg.cn/large/801b780ajw1f84lo0y7q7j20ke028q30.jpg">
+<meta property="og:image" content="http://ww4.sinaimg.cn/large/801b780ajw1f84lpe8qnrj20l70940tr.jpg">
+<meta property="og:image" content="http://ww2.sinaimg.cn/large/801b780ajw1f84lrce3jtj20sh0bf0th.jpg">
+<meta property="og:image" content="http://ww3.sinaimg.cn/large/801b780ajw1f84m3nyl17j20l90cg3zt.jpg">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/801b780ajw1f84m6rchlqj20se0cigmx.jpg">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/801b780ajw1f84m9zypkdj20la08q0tb.jpg">
+<meta property="og:image" content="http://ww3.sinaimg.cn/large/801b780ajw1f84mdl00pfj20x208tt9y.jpg">
+<meta property="og:updated_time" content="2016-12-21T02:46:44.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="函数式编程">
+<meta name="twitter:description" content="什么是函数式编程？首先说说什么是编程范式，它指的是计算机编程的基本风格或典范模式。打个比喻，如果说每个编程者都在创造一个虚拟世界，那么编程范式就是他们所采用的世界观和方法论。常见的编程范式有两种：面向过程编程（C）和面向对象编程（C++，JAVA）。
+函数式编程是一种编程范性，它有如下特点：
+
+函数是有确定性输出的（也就是维基百科上面所说的：避免使用程序状态以及易变对象）。
+使用函数进行编程（恩，">
+<meta name="twitter:image" content="http://ww1.sinaimg.cn/large/801b780ajw1f84lcsj027j20cl02bjrc.jpg">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: {"position":"right","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: '博主'
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2016/09/24/2016-12-21-Functional_Programming/"/>
+
+  <title> 函数式编程 | raimon's Blog </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?5a52bbf51ff63e06bda0b7de1e08d341";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-right page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">raimon's Blog</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle"></p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                函数式编程
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-09-24T14:27:08+08:00" content="2016-09-24">
+              2016-09-24
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Javascript/" itemprop="url" rel="index">
+                    <span itemprop="name">Javascript</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="什么是函数式编程？"><a href="#什么是函数式编程？" class="headerlink" title="什么是函数式编程？"></a>什么是函数式编程？</h2><p>首先说说什么是编程范式，它指的是计算机编程的基本风格或典范模式。打个比喻，如果说每个编程者都在创造一个虚拟世界，那么编程范式就是他们所采用的世界观和方法论。常见的编程范式有两种：面向过程编程（C）和面向对象编程（C++，JAVA）。</p>
+<p>函数式编程是一种编程范性，它有如下特点：</p>
+<ul>
+<li>函数是有确定性输出的（也就是维基百科上面所说的：避免使用程序状态以及易变对象）。</li>
+<li>使用函数进行编程（恩，貌似是废话^_^）。</li>
+<li>可以接受函数当作输入和输出（函数可以作为参数，也可以作为返回值）。</li>
+<li>强调执行的结果而非执行的过程（比如这个函数 getUserInfo 就是针对结果的，我只关注这个函数需要什么参数，以及它会返回什么 ）。</li>
+<li>倡导利用若干简单的执行单元让计算结果不断渐进，逐层推到复杂的运算，而不是设计一个复杂的执行过程。（循序渐进，不要一口气吃成一个大胖子）。</li>
+</ul>
+<h2 id="基本要求"><a href="#基本要求" class="headerlink" title="基本要求"></a>基本要求</h2><ul>
+<li>函数是一等公民（函数可以作为参数，也可以作为返回值，也可以把函数赋给变量）。</li>
+<li>函数没有副作用、不修改状态。</li>
+<li>参数、对象不可变。</li>
+<li>只用表达式，不用语句。</li>
+<li>不鼓励使用this</li>
+</ul>
+<h2 id="种类"><a href="#种类" class="headerlink" title="种类"></a>种类</h2><h3 id="普通函数"><a href="#普通函数" class="headerlink" title="普通函数"></a>普通函数</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">y = f(x)</span><br></pre></td></tr></table></figure>
+<p><img src="http://ww1.sinaimg.cn/large/801b780ajw1f84lcsj027j20cl02bjrc.jpg" alt=""></p>
+<p>将一个输入（x）隐射到一个输出（y）上。</p>
+<h3 id="隐射函数（map）"><a href="#隐射函数（map）" class="headerlink" title="隐射函数（map）"></a>隐射函数（map）</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">y = map(f, x)</span><br></pre></td></tr></table></figure>
+<p><img src="http://ww2.sinaimg.cn/large/801b780ajw1f84lffn529j20ch07n74t.jpg" alt=""></p>
+<p>将一组输入映射到一组输出上。</p>
+<p>如果用面向过程编程来写的话就要分别执行3次f函数：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">x1 = f(y1)</span><br><span class="line">x2 = f(y2)</span><br><span class="line">x3 = f(y3)</span><br></pre></td></tr></table></figure>
+<h3 id="组合函数（compose）"><a href="#组合函数（compose）" class="headerlink" title="组合函数（compose）"></a>组合函数（compose）</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">z = h(g(x))</span><br></pre></td></tr></table></figure>
+<p>设：z = f(x)，则</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">f = compose(h, g)</span><br></pre></td></tr></table></figure>
+<p>h就好比是工厂里面的一条生产流水线，而g和h是流水线上的两道工序。</p>
+<p><img src="http://ww3.sinaimg.cn/large/801b780ajw1f84lo0y7q7j20ke028q30.jpg" alt=""></p>
+<p>组合函数实例：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">compose</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> fns = <span class="built_in">arguments</span></span><br><span class="line">  <span class="keyword">return</span> <span class="function"><span class="keyword">function</span> (<span class="params">result</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">var</span> i = fns.length - <span class="number">1</span>; i &gt;= <span class="number">0</span>; i--) &#123;</span><br><span class="line">      result = fns[i](result)</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> result</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">a</span>(<span class="params">x</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> x + <span class="string">'a'</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">b</span>(<span class="params">x</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> x + <span class="string">'b'</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> add_ab = compose(b, a)</span><br><span class="line"><span class="keyword">const</span> str = add_ab(<span class="string">''</span>)</span><br><span class="line"><span class="built_in">console</span>.log(str) <span class="comment">// 'ab'</span></span><br></pre></td></tr></table></figure>
+<h3 id="隐射-组合"><a href="#隐射-组合" class="headerlink" title="隐射 + 组合"></a>隐射 + 组合</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">z = map(compose(h, g), x)</span><br></pre></td></tr></table></figure>
+<p><img src="http://ww4.sinaimg.cn/large/801b780ajw1f84lpe8qnrj20l70940tr.jpg" alt=""></p>
+<h3 id="柯里化（currify）"><a href="#柯里化（currify）" class="headerlink" title="柯里化（currify）"></a>柯里化（currify）</h3><p>柯里化的函数：可以固定一部分参数的函数。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">z = h(c, y)</span><br></pre></td></tr></table></figure>
+<p>当c为定值时 z = f(y)</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">h = currify(h) <span class="comment">// 柯里话之后的函数h，接受一个固定参数c，并返回一个新的函数</span></span><br><span class="line">f = h(c)</span><br></pre></td></tr></table></figure>
+<p><img src="http://ww2.sinaimg.cn/large/801b780ajw1f84lrce3jtj20sh0bf0th.jpg" alt=""></p>
+<p>currify函数实例：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">curry</span>(<span class="params">f</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="function"><span class="keyword">function</span> (<span class="params">...a</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (a.length &lt; f.length) &#123;</span><br><span class="line">      <span class="keyword">return</span> <span class="function"><span class="keyword">function</span> (<span class="params">...b</span>) </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> f(...a, ...b)</span><br><span class="line">      &#125;</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      <span class="keyword">return</span> f(...a)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> foo = curry(<span class="function"><span class="keyword">function</span> (<span class="params">a, b, c, d</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> a*b + c*d</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(foo(<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>)) <span class="comment">// 14</span></span><br><span class="line"><span class="keyword">const</span> bar = foo(<span class="number">1</span>, <span class="number">2</span>)</span><br><span class="line"><span class="built_in">console</span>.log(bar(<span class="number">3</span>, <span class="number">4</span>)) <span class="comment">// 14</span></span><br></pre></td></tr></table></figure>
+<h3 id="隐射-组合-柯里化"><a href="#隐射-组合-柯里化" class="headerlink" title="隐射 + 组合 + 柯里化"></a>隐射 + 组合 + 柯里化</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">z = map(compose(furrify(h)(c), g), x)</span><br></pre></td></tr></table></figure>
+<p><img src="http://ww3.sinaimg.cn/large/801b780ajw1f84m3nyl17j20l90cg3zt.jpg" alt=""></p>
+<h3 id="filter"><a href="#filter" class="headerlink" title="filter"></a>filter</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">z = map(compose(h(c), g), filter(x))</span><br></pre></td></tr></table></figure>
+<p>通过filter函数过滤掉特定的输入。</p>
+<p><img src="http://ww1.sinaimg.cn/large/801b780ajw1f84m6rchlqj20se0cigmx.jpg" alt=""></p>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">y = f(x)</span><br></pre></td></tr></table></figure>
+<p>f函数就是各种其他函数的组合和变形</p>
+<p><img src="http://ww1.sinaimg.cn/large/801b780ajw1f84m9zypkdj20la08q0tb.jpg" alt=""></p>
+<h2 id="高阶函数"><a href="#高阶函数" class="headerlink" title="高阶函数"></a>高阶函数</h2><p>接受一个或多个函数作为参数，返回一个新的函数。</p>
+<h2 id="什么是纯函数？"><a href="#什么是纯函数？" class="headerlink" title="什么是纯函数？"></a>什么是纯函数？</h2><p>纯函数指的是确定输入能得到确定输出的函数，举个例子</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> minimum = <span class="number">21</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 非纯函数，输出受到外部变量（minimum）的影响，同一个输入可能得到不同的输出</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">checkAge</span>(<span class="params">age</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> age &gt;= minimum</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">minimum = <span class="number">50</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 纯函数，确定输入得到确定输出</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">checkAge</span>(<span class="params">minimum, age</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> age &gt;= minimum</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>纯函数有什么好处呢？</p>
+<ul>
+<li>确定性/可缓存性</li>
+<li>自文档化</li>
+<li>可测试性</li>
+<li>可序列化远程执行</li>
+<li>无锁/并行</li>
+</ul>
+<h2 id="什么是副作用"><a href="#什么是副作用" class="headerlink" title="什么是副作用"></a>什么是副作用</h2><p>副作用就是做了与处理输入输出之外的一些事情，常见的有以下场景：</p>
+<ul>
+<li>更改文件系统</li>
+<li>访问系统状态</li>
+<li>往数据库插入记录</li>
+<li>发送一个http请求</li>
+<li>可变数据</li>
+<li>打印/log</li>
+<li>获取用户输入</li>
+<li>DOM查询</li>
+</ul>
+<p>当然，上面这些操作是必不可少的，我们要做的就是将副作用的影响降到最低，或者是明确地在某一些地方使用这个操作。</p>
+<p>PS：npm 有个库叫作<a href="https://github.com/facebook/immutable-js" target="_blank" rel="external">Immutable</a>，可以创建一个不可更改的数据，已减少副作用。</p>
+<h2 id="一个很重要原则"><a href="#一个很重要原则" class="headerlink" title="一个很重要原则"></a>一个很重要原则</h2><p><strong>尽可能</strong>将纯函数（图中的f，g，也就是有确定性输入和输出的函数）集中在一起，不要和有副作用（不确定性）的函数混合在一起。</p>
+<p><img src="http://ww3.sinaimg.cn/large/801b780ajw1f84mdl00pfj20x208tt9y.jpg" alt=""></p>
+<h2 id="与面向过程式编程的比较"><a href="#与面向过程式编程的比较" class="headerlink" title="与面向过程式编程的比较"></a>与面向过程式编程的比较</h2><ul>
+<li>for loop 对应 map，forEach。</li>
+<li>if else 对应 filter。</li>
+<li>各种运算符，对应各种函数。</li>
+<li>变量对应参数和返回值，理论上没有变量。</li>
+</ul>
+
+      
+    </div>
+
+    <div>
+      
+        
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/09/16/2016-09-16-login_register/" rel="next" title="post数据处理">
+                <i class="fa fa-chevron-left"></i> post数据处理
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/09/24/2016-12-21-functional_programming/" rel="prev" title="函数式编程">
+                函数式编程 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.jpg"
+               alt="raimon" />
+          <p class="site-author-name" itemprop="name">raimon</p>
+          <p class="site-description motion-element" itemprop="description">终生学习者</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">38</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">12</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">15</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/raimonfuns" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/5224061111" target="_blank" title="Weibo">
+                  
+                    <i class="fa fa-fw fa-weibo"></i>
+                  
+                  Weibo
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#什么是函数式编程？"><span class="nav-number">1.</span> <span class="nav-text">什么是函数式编程？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#基本要求"><span class="nav-number">2.</span> <span class="nav-text">基本要求</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#种类"><span class="nav-number">3.</span> <span class="nav-text">种类</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#普通函数"><span class="nav-number">3.1.</span> <span class="nav-text">普通函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#隐射函数（map）"><span class="nav-number">3.2.</span> <span class="nav-text">隐射函数（map）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#组合函数（compose）"><span class="nav-number">3.3.</span> <span class="nav-text">组合函数（compose）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#隐射-组合"><span class="nav-number">3.4.</span> <span class="nav-text">隐射 + 组合</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#柯里化（currify）"><span class="nav-number">3.5.</span> <span class="nav-text">柯里化（currify）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#隐射-组合-柯里化"><span class="nav-number">3.6.</span> <span class="nav-text">隐射 + 组合 + 柯里化</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#filter"><span class="nav-number">3.7.</span> <span class="nav-text">filter</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#总结"><span class="nav-number">3.8.</span> <span class="nav-text">总结</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#高阶函数"><span class="nav-number">4.</span> <span class="nav-text">高阶函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#什么是纯函数？"><span class="nav-number">5.</span> <span class="nav-text">什么是纯函数？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#什么是副作用"><span class="nav-number">6.</span> <span class="nav-text">什么是副作用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#一个很重要原则"><span class="nav-number">7.</span> <span class="nav-text">一个很重要原则</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#与面向过程式编程的比较"><span class="nav-number">8.</span> <span class="nav-text">与面向过程式编程的比较</span></a></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">raimon</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.0.1"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+  
+  
+  
+
+  
+
+  
+
+</body>
+</html>
+ript>
+
+
+
+  
+
+
+
+  
+
+
+
+
+  
+  
+  
+
+  
+
+  
+
+</body>
+</html>

@@ -1,0 +1,672 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="vue," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
+
+
+
+
+
+
+<meta name="description" content="原先有一个项目，想要使用饿了么的UI库来提高项目的简洁度以及可扩展性，也提高开发效率，所以决定将项目的基础库vuejs，从1.0升级为2.0。
+vue2.0移除和替换了很多api，所以在升级的过程中，修改了无数个bug，最终费了很大的劲才升级成功，同时也集成了UI库，界面变简洁美观了，开发变得更加容易了，所以升级还是非常值得的。
+在这个过程中，记录了很多的东西，在此总结一下。
+检测需要升级的代码工">
+<meta property="og:type" content="article">
+<meta property="og:title" content="【总结】vue从1.0升级到2.0">
+<meta property="og:url" content="http://yoursite.com/2016/12/07/2016-12-07-vue-upgrade/index.html">
+<meta property="og:site_name" content="raimon's Blog">
+<meta property="og:description" content="原先有一个项目，想要使用饿了么的UI库来提高项目的简洁度以及可扩展性，也提高开发效率，所以决定将项目的基础库vuejs，从1.0升级为2.0。
+vue2.0移除和替换了很多api，所以在升级的过程中，修改了无数个bug，最终费了很大的劲才升级成功，同时也集成了UI库，界面变简洁美观了，开发变得更加容易了，所以升级还是非常值得的。
+在这个过程中，记录了很多的东西，在此总结一下。
+检测需要升级的代码工">
+<meta property="og:updated_time" content="2016-12-07T14:09:41.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="【总结】vue从1.0升级到2.0">
+<meta name="twitter:description" content="原先有一个项目，想要使用饿了么的UI库来提高项目的简洁度以及可扩展性，也提高开发效率，所以决定将项目的基础库vuejs，从1.0升级为2.0。
+vue2.0移除和替换了很多api，所以在升级的过程中，修改了无数个bug，最终费了很大的劲才升级成功，同时也集成了UI库，界面变简洁美观了，开发变得更加容易了，所以升级还是非常值得的。
+在这个过程中，记录了很多的东西，在此总结一下。
+检测需要升级的代码工">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: {"position":"right","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: '博主'
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2016/12/07/2016-12-07-vue-upgrade/"/>
+
+  <title> 【总结】vue从1.0升级到2.0 | raimon's Blog </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?5a52bbf51ff63e06bda0b7de1e08d341";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-right page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">raimon's Blog</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle"></p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                【总结】vue从1.0升级到2.0
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-12-07T22:05:28+08:00" content="2016-12-07">
+              2016-12-07
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Javascript/" itemprop="url" rel="index">
+                    <span itemprop="name">Javascript</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>原先有一个项目，想要使用<a href="http://element.eleme.io/#/zh-CN" target="_blank" rel="external">饿了么的UI库</a>来提高项目的简洁度以及可扩展性，也提高开发效率，所以决定将项目的基础库vuejs，从1.0升级为2.0。</p>
+<p>vue2.0移除和替换了很多api，所以在升级的过程中，修改了无数个bug，最终费了很大的劲才升级成功，同时也集成了UI库，界面变简洁美观了，开发变得更加容易了，所以升级还是非常值得的。</p>
+<p>在这个过程中，记录了很多的东西，在此总结一下。</p>
+<h2 id="检测需要升级的代码工具"><a href="#检测需要升级的代码工具" class="headerlink" title="检测需要升级的代码工具"></a>检测需要升级的代码工具</h2><p><a href="https://github.com/vuejs/vue-migration-helper" target="_blank" rel="external">vue-migration-helper</a>能用来检测定位需要升级的代码，可以快速定位，批量修改代码，很实用。</p>
+<h2 id="vuex的dispatch"><a href="#vuex的dispatch" class="headerlink" title="vuex的dispatch"></a>vuex的dispatch</h2><p>1.0是通过actions的dispatch来派发mutation。</p>
+<p>2.0改成用dispatch派发action，然后action通过commit派发mutation，然后对数据进行修改。</p>
+<h2 id="router"><a href="#router" class="headerlink" title="router"></a>router</h2><p>1.0在组件中监听路由变化的写法</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">new</span> Vue(&#123;</span><br><span class="line">  route (&#123;to&#125;) &#123;</span><br><span class="line">	<span class="comment">//to是路由实例，可以拿到路由的各种信息，比如params，path等等</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p>2.0改成用watch监听</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">new</span> Vue(&#123;</span><br><span class="line">  watch: &#123;</span><br><span class="line">    <span class="string">'$store'</span> () &#123;</span><br><span class="line">      <span class="comment">// ...</span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p>路由信息通过<code>this.$route</code>获取，路由实例是<code>this.$router</code>。</p>
+<h2 id="filter"><a href="#filter" class="headerlink" title="filter"></a>filter</h2><p>1.0的过滤器filter可以在指令中使用，比如说</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">v-html</span>=<span class="string">"startTime | date"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>2.0将filter改成只能在取值的时候使用，而不能在指令中使用</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span>&#123;&#123;startTime | date&#125;&#125;<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h2 id="数据必须提前声明"><a href="#数据必须提前声明" class="headerlink" title="数据必须提前声明"></a>数据必须提前声明</h2><p>1.0没有提前声明数据并不会有任何问题。</p>
+<p>2.0如果提前声明数据就会有警告。</p>
+<h2 id="for遍历中的-index"><a href="#for遍历中的-index" class="headerlink" title="for遍历中的$index"></a>for遍历中的$index</h2><p>1.0的for遍历可以通过这种方式拿到$index</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">li</span> <span class="attr">v-for</span>=<span class="string">"item in items"</span>&gt;</span></span><br><span class="line">	&#123;&#123;$index&#125;&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>2.0这取消这种快捷写法，改成必须提前声明</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">li</span> <span class="attr">v-for</span>=<span class="string">"(item, index) in items"</span>&gt;</span></span><br><span class="line">	&#123;&#123;index&#125;&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h2 id="取消数组的-set和-remove方法"><a href="#取消数组的-set和-remove方法" class="headerlink" title="取消数组的$set和$remove方法"></a>取消数组的$set和$remove方法</h2><p>1.0可以这样子操作数组</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">vm.list.$set(index, item)</span><br><span class="line">vm.list.$remove(item)</span><br></pre></td></tr></table></figure>
+<p>2.0将$set改成全局的Vue.$set，$remove改用splice</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Vue.set(list, index, item)</span><br><span class="line">vm.list.splice(index, 1)</span><br></pre></td></tr></table></figure>
+<h2 id="数据绑定的写法"><a href="#数据绑定的写法" class="headerlink" title="数据绑定的写法"></a>数据绑定的写法</h2><p>1.0可以这样子绑定数据</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">href</span>=<span class="string">"&#123;&#123;item.url&#125;&#125;"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>2.0不允许在内联属性中使用插值符号，所以要这么做</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">:href</span>=<span class="string">"item.url"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h2 id="vuex中getters和actions"><a href="#vuex中getters和actions" class="headerlink" title="vuex中getters和actions"></a>vuex中getters和actions</h2><p>1.0中getters和actions的写法</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">new</span> Vue(&#123;</span><br><span class="line">  vuex: &#123;</span><br><span class="line">    actions: &#123;</span><br><span class="line">      getUserInfo</span><br><span class="line">    &#125;,</span><br><span class="line">    getters: &#123;</span><br><span class="line">      userId: (&#123; userInfo &#125;) =&gt; userInfo.id,</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p>2.0的写法是</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; setTip &#125; <span class="keyword">from</span> <span class="string">'../../vuex/actions/doc_actions'</span></span><br><span class="line"><span class="keyword">import</span> &#123; mapGetters &#125; <span class="keyword">from</span> <span class="string">'vuex'</span></span><br><span class="line"></span><br><span class="line">computed: &#123;</span><br><span class="line">  ...mapGetters(&#123;</span><br><span class="line">    userId</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>而action的调用方式为<code>this.$store.dispatch(action_name, payload)</code></p>
+
+      
+    </div>
+
+    <div>
+      
+        
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/vue/" rel="tag">#vue</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/11/14/2016-11-14-snowflake/" rel="next" title="《React Native开源项目 — Snowflake》学习总结">
+                <i class="fa fa-chevron-left"></i> 《React Native开源项目 — Snowflake》学习总结
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/12/08/2016-12-08-vuex-error/" rel="prev" title="vuex报错：vuex requires a Promise polyfill in this browser">
+                vuex报错：vuex requires a Promise polyfill in this browser <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.jpg"
+               alt="raimon" />
+          <p class="site-author-name" itemprop="name">raimon</p>
+          <p class="site-description motion-element" itemprop="description">终生学习者</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">38</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">12</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">15</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/raimonfuns" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/5224061111" target="_blank" title="Weibo">
+                  
+                    <i class="fa fa-fw fa-weibo"></i>
+                  
+                  Weibo
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#检测需要升级的代码工具"><span class="nav-number">1.</span> <span class="nav-text">检测需要升级的代码工具</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#vuex的dispatch"><span class="nav-number">2.</span> <span class="nav-text">vuex的dispatch</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#router"><span class="nav-number">3.</span> <span class="nav-text">router</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#filter"><span class="nav-number">4.</span> <span class="nav-text">filter</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数据必须提前声明"><span class="nav-number">5.</span> <span class="nav-text">数据必须提前声明</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#for遍历中的-index"><span class="nav-number">6.</span> <span class="nav-text">for遍历中的$index</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#取消数组的-set和-remove方法"><span class="nav-number">7.</span> <span class="nav-text">取消数组的$set和$remove方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数据绑定的写法"><span class="nav-number">8.</span> <span class="nav-text">数据绑定的写法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#vuex中getters和actions"><span class="nav-number">9.</span> <span class="nav-text">vuex中getters和actions</span></a></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">raimon</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.0.1"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+  
+  
+  
+
+  
+
+  
+
+</body>
+</html>
