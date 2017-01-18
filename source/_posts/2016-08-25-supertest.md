@@ -1,7 +1,7 @@
 ---
 title: supertest测试框架
-categories: node
-tags: [测试]
+categories: Node
+tags: [单元测试]
 ---
 
 用来测试nodejs http服务的框架，断言的语法基于superagent框架（在客户端和nodejs都能使用的http请求框架，语法优雅）
@@ -45,4 +45,3 @@ describe('GET', function(){
   })
 })
 ```
-

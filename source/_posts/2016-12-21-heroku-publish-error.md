@@ -1,7 +1,7 @@
 ---
 title: 【错误】项目上传到heroku之后，访问报错
-categories: rails
-tags: 错误
+categories: rails全栈
+
 ---
 
 ## 动作

@@ -1,7 +1,7 @@
 ---
 title: 【错误】ApplicationRecord
-categories: rails
-tags: 错误
+categories: rails全栈
+
 ---
 
 新建model时，默认的代码是长这个样子的

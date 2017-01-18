@@ -1,7 +1,7 @@
 ---
 title: 【错误】安装devise出错
-categories: rails
-tags: 错误
+categories: rails全栈
+
 ---
 
 ## 动作

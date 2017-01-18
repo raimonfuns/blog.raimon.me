@@ -1,23 +1,23 @@
 ---
 title: The Cheatsheets for Mocha
 categories: Javascript
-tags: [Mocha, Cheatsheets]
+tags: [单元测试]
 ---
 
 ### Getting Started
 
-    $ npm install -g mocha
-    $ mocha // 默认test目录下的测试脚本
+	$ npm install -g mocha
+	$ mocha // 默认test目录下的测试脚本
 
 
 ### Usage
 
-    --recursive                             include sub directories
-    --reporters                             display available reporters
-    -w, --watch                             watch files for changes
-    -b, --bail                              bail after first test failure
-    --compilers <ext>:<module>,...          use the given module(s) to compile files
-    -r, --require <name>                    require the given module
+	--recursive                             include sub directories
+	--reporters                             display available reporters
+	-w, --watch                             watch files for changes
+	-b, --bail                              bail after first test failure
+	--compilers <ext>:<module>,...          use the given module(s) to compile files
+	-r, --require <name>                    require the given module
 
 ### ES6测试
 
@@ -32,7 +32,7 @@ tags: [Mocha, Cheatsheets]
 在项目目录下新建一个.babelrc配置文件
 
 	{
-		"presets": [ "es2015" ]
+	    "presets": [ "es2015" ]
 	}
 
 

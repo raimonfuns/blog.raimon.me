@@ -1,6 +1,6 @@
 ---
-title: 【总结】2016/12/08
-categories: 总结
+title: 【全栈日记】2016/12/08
+categories: rails全栈
 ---
 
 ## Objective

@@ -1,8 +1,7 @@
 ---
-title: 【总结】2017/01/03
-categories: 总结
+title: 【全栈日记】1/3
+categories: rails全栈
 ---
-
 ## Objective
 
 - 重新整理个人知识系统
@@ -22,7 +21,7 @@ categories: 总结
 
 昨天晚上在阳志平的公众号《心智工具箱》里面看到一篇推送文章《构建优雅的知识创造系统》，里面提高一种按照域名整理个人知识的管理方法，并且在标题处加上日期，还有比较反常识的一点：**不要分多级目录，只需要一层就够了**，于是，我打算尝试一下这种管理方法，这是我整理之后的目录
 
-![](http://oggx6lf7f.bkt.clouddn.com/mxvzv.png)
+![][image-1]
 
 
 
@@ -30,7 +29,7 @@ categories: 总结
 
 你可能会说不分子目录，文件不好检索呀？其实不会，只要把一级目录建好，比如博客文章放一个目录，图片放一个目录，ppt放一个目录，然后规范所有的命名，让文件名成为其唯一的标识，在配合Spotlight全文检索，查找文件是很快的。
 
-![](http://oggx6lf7f.bkt.clouddn.com/lnmu6.png)
+![][image-2]
 
 最后，用百度网盘后者github同步内容，done！
 
@@ -46,7 +45,7 @@ categories: 总结
 
 知道了提取练习的好处，就可以很好地理解这张图的意思
 
-![](http://oggx6lf7f.bkt.clouddn.com/jn07a.png)
+![][image-3]
 
 我们可以发现，金字塔上面的被动学习都是很少进行提取练习，甚至根本没有提取练习这个动作，所以最终的结果就是导致低效。而金字塔下的主动学习本质上都是在进行提取练习。小组讨论、实作演练、教授知识都是提取练习，因为他们都是脱稿之后，在大脑的记忆中搜索对应的知识，进而把知识记得更加牢固。
 
@@ -79,3 +78,7 @@ categories: 总结
 ## Decisional
 
 明天开始练习《招聘网站》。
+
+[image-1]:	http://oggx6lf7f.bkt.clouddn.com/mxvzv.png
+[image-2]:	http://oggx6lf7f.bkt.clouddn.com/lnmu6.png
+[image-3]:	http://oggx6lf7f.bkt.clouddn.com/jn07a.png

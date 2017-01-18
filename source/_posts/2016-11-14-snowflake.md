@@ -1,10 +1,10 @@
 ---
 title: 《React Native开源项目 — Snowflake》学习总结
-categories: javascript
-tags: [react]
+categories: Javascript
+tags: [React]
 ---
 
-snowflake是一个非常好的[react naitve开源项目](https://github.com/bartonhammond/snowflake)，功能其实并不复杂，但是讲解却非常详细，它的功能主要是实现手机app的登录、注册、修改密码以及获取和修改用户信息等功能，是个很常见的业务场景。
+snowflake是一个非常好的[react naitve开源项目][1]，功能其实并不复杂，但是讲解却非常详细，它的功能主要是实现手机app的登录、注册、修改密码以及获取和修改用户信息等功能，是个很常见的业务场景。
 
 通过它可以了解一个完整的React Native项目是长什么样子的，有哪些常用的模块，以及代码是怎么规划的，组件和组件之间是如何通过redux来进行通信交流的。
 
@@ -14,7 +14,7 @@ snowflake是一个非常好的[react naitve开源项目](https://github.com/bart
 
 ### react-native-i18n
 
-[https://github.com/AlexanderZaytsev/react-native-i18n](https://github.com/AlexanderZaytsev/react-native-i18n)
+[https://github.com/AlexanderZaytsev/react-native-i18n][2]
 
 一开始不明白`i18n`是什么意思，后来google之后才知道，原来是internationalization，国际化的意思，nternationalization去掉头尾的i和n刚好还剩下18个字符。这个模块可以让app自动地切换成当前移动设备使用的语言。
 
@@ -79,7 +79,7 @@ let version = I18n.t('App.version')
 
 ### tcomb-form-native
 
-[https://github.com/gcanti/tcomb-form-native](https://github.com/gcanti/tcomb-form-native)
+[https://github.com/gcanti/tcomb-form-native][3]
 
 一个非常好用的表单库，根据配置可以快速生成表单，使用的方法如下
 
@@ -107,11 +107,11 @@ options.fields['passwordAgain'].placeholder = I18n.t('LoginForm.password_again')
 
 最终可以生成相应的表单
 
-![](http://oggx6lf7f.bkt.clouddn.com/v2jdt.png)
+![][image-1]
 
 ### react-native-router-flux
 
-[https://github.com/aksonov/react-native-router-flux](https://github.com/aksonov/react-native-router-flux)
+[https://github.com/aksonov/react-native-router-flux][4]
 
 React Native路由模块，轻松实现不同组件的切换。使用方法：
 
@@ -161,7 +161,7 @@ Actions.Register()
 
 ### react-native-simple-store
 
-[https://github.com/jasonmerino/react-native-simple-store](https://github.com/jasonmerino/react-native-simple-store)
+[https://github.com/jasonmerino/react-native-simple-store][5]
 
 React Native本地的异步储存，使用方法如下：
 
@@ -205,3 +205,11 @@ store
 - componengs存放通用的小组件
 
 项目虽然不是很复杂，但是代码的规划非常合理，也有完整的单元测试，确实学到了很多东西。
+
+[1]:	https://github.com/bartonhammond/snowflake
+[2]:	https://github.com/AlexanderZaytsev/react-native-i18n
+[3]:	https://github.com/gcanti/tcomb-form-native
+[4]:	https://github.com/aksonov/react-native-router-flux
+[5]:	https://github.com/jasonmerino/react-native-simple-store
+
+[image-1]:	http://oggx6lf7f.bkt.clouddn.com/v2jdt.png

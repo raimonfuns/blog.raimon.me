@@ -1,7 +1,7 @@
 ---
 title: Node学习笔记：Global对象
-categories: node
-tags: [node]
+categories: Node
+
 ---
 
 ## REPL环境

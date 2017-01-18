@@ -1,6 +1,6 @@
 ---
 title: Nginx学习笔记
-categories: 服务端
+categories: 工具
 tags: Nginx
 ---
 

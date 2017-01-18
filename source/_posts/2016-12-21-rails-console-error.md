@@ -1,7 +1,7 @@
 ---
 title: 【错误】在rails console中操作数据库报错
-categories: rails
-tags: 错误
+categories: rails全栈
+
 ---
 
 ## 动作

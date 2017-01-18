@@ -1,10 +1,10 @@
 ---
 title: 单元测试之常用的ES6语法
 categories: Javascript
-tags: [es6, 单元测试]
+tags: [ES6, 单元测试]
 ---
 
-之前粗略的看过[ECMAScript 6入门](http://es6.ruanyifeng.com/)教程，对于ES6的语法有了大概的了解，比如箭头函数，let和const声明，设置函数参数的默认值等等，一直没有系统地学习，今天抽空阅读一遍[es6-cheatsheet](https://github.com/DrkSephy/es6-cheatsheet)，针对常用的语法写了单元测试，以加强对ES6语法的理解，下面是测试代码和测试结果。
+之前粗略的看过[ECMAScript 6入门][1]教程，对于ES6的语法有了大概的了解，比如箭头函数，let和const声明，设置函数参数的默认值等等，一直没有系统地学习，今天抽空阅读一遍[es6-cheatsheet][2]，针对常用的语法写了单元测试，以加强对ES6语法的理解，下面是测试代码和测试结果。
 
 ## 测试代码
 
@@ -199,4 +199,9 @@ describe('Arrow Functions', function () {
 ```
 
 ## 测试结果
-![unit test result](http://chuantu.biz/t5/14/1467467341x2918528194.png)
+![unit test result][image-1]
+
+[1]:	http://es6.ruanyifeng.com/
+[2]:	https://github.com/DrkSephy/es6-cheatsheet
+
+[image-1]:	http://chuantu.biz/t5/14/1467467341x2918528194.png

@@ -1,7 +1,7 @@
 ---
 title: 【错误】关联表的计数问题
-categories: rails
-tags: 错误
+categories: rails全栈
+
 ---
 
 ## 位置

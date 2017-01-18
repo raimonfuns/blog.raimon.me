@@ -1,6 +1,7 @@
 ---
 title: 函数式编程
 categories: Javascript
+tags: 函数式编程
 ---
 
 ## 什么是函数式编程？
@@ -10,7 +11,7 @@ categories: Javascript
 函数式编程是一种编程范性，它有如下特点：
 
 - 函数是有确定性输出的（也就是维基百科上面所说的：避免使用程序状态以及易变对象）。
-- 使用函数进行编程（恩，貌似是废话^_^）。
+- 使用函数进行编程（恩，貌似是废话^\_^）。
 - 可以接受函数当作输入和输出（函数可以作为参数，也可以作为返回值）。
 - 强调执行的结果而非执行的过程（比如这个函数 getUserInfo 就是针对结果的，我只关注这个函数需要什么参数，以及它会返回什么 ）。
 - 倡导利用若干简单的执行单元让计算结果不断渐进，逐层推到复杂的运算，而不是设计一个复杂的执行过程。（循序渐进，不要一口气吃成一个大胖子）。
@@ -31,7 +32,7 @@ categories: Javascript
 y = f(x)
 ```
 
-![](http://ww1.sinaimg.cn/large/801b780ajw1f84lcsj027j20cl02bjrc.jpg)
+![][image-1]
 
 将一个输入（x）隐射到一个输出（y）上。
 
@@ -41,7 +42,7 @@ y = f(x)
 y = map(f, x)
 ```
 
-![](http://ww2.sinaimg.cn/large/801b780ajw1f84lffn529j20ch07n74t.jpg)
+![][image-2]
 
 将一组输入映射到一组输出上。
 
@@ -67,7 +68,7 @@ f = compose(h, g)
 
 h就好比是工厂里面的一条生产流水线，而g和h是流水线上的两道工序。
 
-![](http://ww3.sinaimg.cn/large/801b780ajw1f84lo0y7q7j20ke028q30.jpg)
+![][image-3]
 
 组合函数实例：
 
@@ -101,7 +102,7 @@ console.log(str) // 'ab'
 z = map(compose(h, g), x)
 ```
 
-![](http://ww4.sinaimg.cn/large/801b780ajw1f84lpe8qnrj20l70940tr.jpg)
+![][image-4]
 
 ### 柯里化（currify）
 
@@ -118,7 +119,7 @@ h = currify(h) // 柯里话之后的函数h，接受一个固定参数c，并返
 f = h(c)
 ```
 
-![](http://ww2.sinaimg.cn/large/801b780ajw1f84lrce3jtj20sh0bf0th.jpg)
+![][image-5]
 
 currify函数实例：
 
@@ -150,7 +151,7 @@ console.log(bar(3, 4)) // 14
 z = map(compose(furrify(h)(c), g), x)
 ```
 
-![](http://ww3.sinaimg.cn/large/801b780ajw1f84m3nyl17j20l90cg3zt.jpg)
+![][image-6]
 
 ### filter
 
@@ -160,7 +161,7 @@ z = map(compose(h(c), g), filter(x))
 
 通过filter函数过滤掉特定的输入。
 
-![](http://ww1.sinaimg.cn/large/801b780ajw1f84m6rchlqj20se0cigmx.jpg)
+![][image-7]
 
 ### 总结
 
@@ -170,7 +171,7 @@ y = f(x)
 
 f函数就是各种其他函数的组合和变形
 
-![](http://ww1.sinaimg.cn/large/801b780ajw1f84m9zypkdj20la08q0tb.jpg)
+![][image-8]
 
 ## 高阶函数
 
@@ -219,13 +220,13 @@ function checkAge(minimum, age) {
 
 当然，上面这些操作是必不可少的，我们要做的就是将副作用的影响降到最低，或者是明确地在某一些地方使用这个操作。
 
-PS：npm 有个库叫作[Immutable](https://github.com/facebook/immutable-js)，可以创建一个不可更改的数据，已减少副作用。
+PS：npm 有个库叫作[Immutable][1]，可以创建一个不可更改的数据，已减少副作用。
 
 ## 一个很重要原则
 
 **尽可能**将纯函数（图中的f，g，也就是有确定性输入和输出的函数）集中在一起，不要和有副作用（不确定性）的函数混合在一起。
 
-![](http://ww3.sinaimg.cn/large/801b780ajw1f84mdl00pfj20x208tt9y.jpg)
+![][image-9]
 
 ## 与面向过程式编程的比较
 
@@ -233,3 +234,15 @@ PS：npm 有个库叫作[Immutable](https://github.com/facebook/immutable-js)，
 - if else 对应 filter。
 - 各种运算符，对应各种函数。
 - 变量对应参数和返回值，理论上没有变量。
+
+[1]:	https://github.com/facebook/immutable-js
+
+[image-1]:	http://ww1.sinaimg.cn/large/801b780ajw1f84lcsj027j20cl02bjrc.jpg
+[image-2]:	http://ww2.sinaimg.cn/large/801b780ajw1f84lffn529j20ch07n74t.jpg
+[image-3]:	http://ww3.sinaimg.cn/large/801b780ajw1f84lo0y7q7j20ke028q30.jpg
+[image-4]:	http://ww4.sinaimg.cn/large/801b780ajw1f84lpe8qnrj20l70940tr.jpg
+[image-5]:	http://ww2.sinaimg.cn/large/801b780ajw1f84lrce3jtj20sh0bf0th.jpg
+[image-6]:	http://ww3.sinaimg.cn/large/801b780ajw1f84m3nyl17j20l90cg3zt.jpg
+[image-7]:	http://ww1.sinaimg.cn/large/801b780ajw1f84m6rchlqj20se0cigmx.jpg
+[image-8]:	http://ww1.sinaimg.cn/large/801b780ajw1f84m9zypkdj20la08q0tb.jpg
+[image-9]:	http://ww3.sinaimg.cn/large/801b780ajw1f84mdl00pfj20x208tt9y.jpg

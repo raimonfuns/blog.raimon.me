@@ -1,6 +1,6 @@
 ---
 title: post数据处理
-categories: node
+categories: Node
 ---
 
 ## req.body

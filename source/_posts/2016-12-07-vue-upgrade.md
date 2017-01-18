@@ -1,10 +1,10 @@
 ---
-title: 【总结】vue从1.0升级到2.0
+title: vue从1.0升级到2.0
 categories: Javascript
-tags: [vue]
+
 ---
 
-原先有一个项目，想要使用[饿了么的UI库](http://element.eleme.io/#/zh-CN)来提高项目的简洁度以及可扩展性，也提高开发效率，所以决定将项目的基础库vuejs，从1.0升级为2.0。
+原先有一个项目，想要使用[饿了么的UI库][1]来提高项目的简洁度以及可扩展性，也提高开发效率，所以决定将项目的基础库vuejs，从1.0升级为2.0。
 
 vue2.0移除和替换了很多api，所以在升级的过程中，修改了无数个bug，最终费了很大的劲才升级成功，同时也集成了UI库，界面变简洁美观了，开发变得更加容易了，所以升级还是非常值得的。
 
@@ -12,7 +12,7 @@ vue2.0移除和替换了很多api，所以在升级的过程中，修改了无�
 
 ## 检测需要升级的代码工具
 
-[vue-migration-helper](https://github.com/vuejs/vue-migration-helper)能用来检测定位需要升级的代码，可以快速定位，批量修改代码，很实用。
+[vue-migration-helper][2]能用来检测定位需要升级的代码，可以快速定位，批量修改代码，很实用。
 
 ## vuex的dispatch
 
@@ -27,7 +27,7 @@ vue2.0移除和替换了很多api，所以在升级的过程中，修改了无�
 ```javascript
 new Vue({
   route ({to}) {
-	//to是路由实例，可以拿到路由的各种信息，比如params，path等等
+    //to是路由实例，可以拿到路由的各种信息，比如params，path等等
   }
 })
 ```
@@ -72,7 +72,7 @@ new Vue({
 
 ```html
 <li v-for="item in items">
-	{{$index}}
+    {{$index}}
 </li>
 ```
 
@@ -80,7 +80,7 @@ new Vue({
 
 ```html
 <li v-for="(item, index) in items">
-	{{index}}
+    {{index}}
 </li>
 ```
 
@@ -145,3 +145,6 @@ computed: {
 ```
 
 而action的调用方式为`this.$store.dispatch(action_name, payload)`
+
+[1]:	http://element.eleme.io/#/zh-CN
+[2]:	https://github.com/vuejs/vue-migration-helper
