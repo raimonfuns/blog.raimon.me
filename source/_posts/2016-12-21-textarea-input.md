@@ -1,6 +1,6 @@
 ---
 title: 【错误】textarea为啥变成了input？
-categories: rails全栈
+categories: Ruby on Rails全栈训练营
 
 ---
 

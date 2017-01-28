@@ -1,5 +1,5 @@
 ---
-title: 【用法】为什么在.gitignore设置忽略文件夹无效？
+title: 【教程】为什么在.gitignore设置忽略文件夹无效？
 categories: 工具
 tags: [Git]
 ---

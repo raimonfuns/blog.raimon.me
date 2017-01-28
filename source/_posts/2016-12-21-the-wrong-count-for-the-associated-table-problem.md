@@ -1,6 +1,6 @@
 ---
 title: 【错误】关联表的计数问题
-categories: rails全栈
+categories: Ruby on Rails全栈训练营
 
 ---
 

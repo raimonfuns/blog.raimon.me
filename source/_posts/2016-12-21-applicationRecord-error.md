@@ -1,6 +1,6 @@
 ---
 title: 【错误】ApplicationRecord
-categories: rails全栈
+categories: Ruby on Rails全栈训练营
 
 ---
 

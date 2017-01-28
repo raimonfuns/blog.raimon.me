@@ -1,6 +1,6 @@
 ---
 title: 【全栈日记】1/3
-categories: rails全栈
+categories: Ruby on Rails全栈训练营
 ---
 ## Objective
 

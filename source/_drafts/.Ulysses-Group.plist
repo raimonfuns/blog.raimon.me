@@ -2,21 +2,118 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>childOrder</key>
+	<array>
+		<string>blog</string>
+	</array>
 	<key>resolutionData</key>
 	<dict>
+		<key>childOrder</key>
+		<dict>
+			<key>blog</key>
+			<dict>
+				<key>explicitUnassignment</key>
+				<true/>
+				<key>firstUnassignment</key>
+				<real>506420231.36886102</real>
+				<key>lastModification</key>
+				<real>506420231.36886102</real>
+				<key>version</key>
+				<dict>
+					<key>fd545631f919d427684fd0c7f8fc656f2b19d9b276ea5e2aefcf66738b8d84df</key>
+					<integer>4</integer>
+				</dict>
+			</dict>
+		</dict>
 		<key>sheetClusters</key>
-		<dict/>
+		<dict>
+			<key>2016-01-18-html-teaching-yourself.md</key>
+			<dict>
+				<key>lastModification</key>
+				<real>506421761.92783201</real>
+				<key>version</key>
+				<dict>
+					<key>fd545631f919d427684fd0c7f8fc656f2b19d9b276ea5e2aefcf66738b8d84df</key>
+					<integer>26</integer>
+				</dict>
+			</dict>
+			<key>2016-12-19-display-table.md</key>
+			<dict>
+				<key>lastModification</key>
+				<real>506421083.98850799</real>
+				<key>version</key>
+				<dict>
+					<key>fd545631f919d427684fd0c7f8fc656f2b19d9b276ea5e2aefcf66738b8d84df</key>
+					<integer>23</integer>
+				</dict>
+			</dict>
+			<key>2017-01-19-be-good-type.md</key>
+			<dict>
+				<key>lastModification</key>
+				<real>506527066.48153299</real>
+				<key>version</key>
+				<dict>
+					<key>fd545631f919d427684fd0c7f8fc656f2b19d9b276ea5e2aefcf66738b8d84df</key>
+					<integer>30</integer>
+				</dict>
+			</dict>
+			<key>2017-01-20-coding-diary.md</key>
+			<dict>
+				<key>lastModification</key>
+				<real>506534976.26419699</real>
+				<key>version</key>
+				<dict>
+					<key>fd545631f919d427684fd0c7f8fc656f2b19d9b276ea5e2aefcf66738b8d84df</key>
+					<integer>34</integer>
+				</dict>
+			</dict>
+			<key>Untitled.md</key>
+			<dict>
+				<key>explicitUnassignment</key>
+				<true/>
+				<key>firstUnassignment</key>
+				<real>506850049.67813802</real>
+				<key>lastModification</key>
+				<real>506850049.67813802</real>
+				<key>version</key>
+				<dict>
+					<key>fd545631f919d427684fd0c7f8fc656f2b19d9b276ea5e2aefcf66738b8d84df</key>
+					<integer>38</integer>
+				</dict>
+			</dict>
+		</dict>
 	</dict>
 	<key>sheetClusters</key>
-	<array/>
+	<array>
+		<array>
+			<string>Untitled.md</string>
+		</array>
+		<array>
+			<string>2016-01-18-html-teaching-yourself.md</string>
+		</array>
+		<array>
+			<string>2017-01-19-be-good-type.md</string>
+		</array>
+		<array>
+			<string>2017-01-20-coding-diary.md</string>
+		</array>
+		<array>
+			<string>2016-12-19-display-table.md</string>
+		</array>
+	</array>
 	<key>storeFormatVersion</key>
 	<integer>1</integer>
 	<key>versioning</key>
 	<dict>
+		<key>childOrder</key>
+		<dict>
+			<key>fd545631f919d427684fd0c7f8fc656f2b19d9b276ea5e2aefcf66738b8d84df</key>
+			<integer>4</integer>
+		</dict>
 		<key>sheetClusters</key>
 		<dict>
 			<key>fd545631f919d427684fd0c7f8fc656f2b19d9b276ea5e2aefcf66738b8d84df</key>
-			<integer>21</integer>
+			<integer>38</integer>
 		</dict>
 	</dict>
 </dict>

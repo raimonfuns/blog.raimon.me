@@ -1,7 +1,6 @@
 ---
 title: 【错误】vue-resource发送参数格式错误
 categories: Javascript
-
 ---
 
 ## 动作

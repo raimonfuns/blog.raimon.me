@@ -1,6 +1,6 @@
 ---
 title: 【错误】无法执行post方法
-categories: rails全栈
+categories: Ruby on Rails全栈训练营
 ---
 
 ### 动作

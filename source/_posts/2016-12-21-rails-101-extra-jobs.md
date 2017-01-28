@@ -1,6 +1,6 @@
 ---
 title: rails 101 额外作业
-categories: rails全栈
+categories: Ruby on Rails全栈训练营
 ---
 
 ![](http://oggx6lf7f.bkt.clouddn.com/3xg77.jpg)

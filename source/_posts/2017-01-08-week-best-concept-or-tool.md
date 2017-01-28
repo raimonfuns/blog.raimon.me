@@ -1,6 +1,6 @@
 ---
 title: 第一周学到的最棒的概念/工具
-categories: rails全栈
+categories: Ruby on Rails全栈训练营
 tags: [用户故事, 提取练习]
 ---
 

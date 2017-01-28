@@ -1,6 +1,6 @@
 ---
-title: 【用法】bootstrap中的row布局
-categories: rails全栈
+title: 【教程】bootstrap中的row布局
+categories: Ruby on Rails全栈训练营
 ---
 
 如果没加`row`包裹，两边会有15px的padding

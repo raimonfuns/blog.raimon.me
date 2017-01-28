@@ -1,6 +1,6 @@
 ---
 title: 【错误】不能执行正确的create和update（多级路由）
-categories: rails全栈
+categories: Ruby on Rails全栈训练营
 ---
 
 ### 位置

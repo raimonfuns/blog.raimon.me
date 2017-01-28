@@ -1,6 +1,6 @@
 ---
 title: 【错误】安装devise出错
-categories: rails全栈
+categories: Ruby on Rails全栈训练营
 
 ---
 

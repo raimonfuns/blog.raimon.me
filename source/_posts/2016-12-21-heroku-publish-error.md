@@ -1,6 +1,6 @@
 ---
 title: 【错误】项目上传到heroku之后，访问报错
-categories: rails全栈
+categories: Ruby on Rails全栈训练营
 
 ---
 

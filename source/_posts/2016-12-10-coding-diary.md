@@ -1,6 +1,6 @@
 ---
 title: 【全栈日记】2016/12/10
-categories: rails全栈
+categories: Ruby on Rails全栈训练营
 ---
 
 ## Objective

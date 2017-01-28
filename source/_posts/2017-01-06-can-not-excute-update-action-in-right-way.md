@@ -1,6 +1,6 @@
 ---
 title: 【错误】update action
-categories: rails全栈
+categories: Ruby on Rails全栈训练营
 ---
 
 ### 动作
