@@ -1,7 +1,7 @@
 
 ---
 title: 【错误】搜索空内容会报错
-categories: Ruby on Rails全栈训练营
+categories: 全栈营
 ---
 
 ## 报错信息

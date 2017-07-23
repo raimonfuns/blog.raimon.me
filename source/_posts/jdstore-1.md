@@ -1,0 +1,129 @@
+# 「一步一步做出小小食杂铺」前端分享系列1 — navbar导航栏
+
+## 前言
+
+目前，「小小食杂铺」的前端页面基本开发完毕，我打算写一个系列教程，帮助大家掌握css，写出自己想要的页面效果。我会分享如何一步一步做出「小小食杂铺」的前端页面。由于很多同学没有css基础，所以，我不会提及太多术语，尽量用浅显易懂的词语来描述。希望能对大家有帮助，开始吧。
+
+## 目标
+
+实现navbar导航栏
+
+![](https://ww1.sinaimg.cn/large/006tKfTcly1fcuwd7jnstj30zp00z3ye.jpg)
+
+## 步骤
+
+### step1：贴上html代码
+
+```html
+<div class="navbar-wrap">
+  <div class="shop_navbar">
+    <div class="shop_navbar-left">
+      <a href="#">欢迎来到小小食杂铺！</a>
+    </div>
+    <ul class="shop_navbar-list">
+      <li class="shop_navbar-listItem">
+        <a href="#">注册</a>
+      </li>
+      <li class="shop_navbar-spacer"></li>
+      <li class="shop_navbar-listItem">
+        <a href="#">登入</a>
+      </li>
+    </ul>
+  </div>
+</div>
+```
+
+实例代码我已经帮你备好了，来这里：[http://codepen.io/raimonfuns/pen/rjgZGL](http://codepen.io/raimonfuns/pen/rjgZGL)
+
+可以看到，页面上的内容完全没有见过美化，相当丑陋，就好比一个没有装修过的房子。
+
+![](https://ww3.sinaimg.cn/large/006tKfTcgy1fcuxczh7u4j305z01rglj.jpg)
+
+接下来我们开始给「房子」上漆。
+
+后面的步骤，大家可以在css区域跟着贴代码。
+
+go！
+
+![](https://ww2.sinaimg.cn/large/006tKfTcly1fcuwiolppfj30hk09zglk.jpg)
+
+### step2：写css代码
+
+```css
+.navbar-wrap {
+  background: #F5F5F5; /*背景颜色*/
+  font-size: 12px; /*字体12px*/
+  height: 30px; /*设置高度*/
+  line-height: 30px; /*设置行高，实现垂直居中，口诀「如果高度等于行高，那就实现了文本的垂直居中」*/
+  color: #717171; /*字体颜色*/
+}
+```
+
+`cmd + s`保存，看效果
+
+![](https://ww4.sinaimg.cn/large/006tKfTcly1fcuwt90ovwj30z902t0so.jpg)
+
+可以看到，navbar背景颜色已经显现出来了。接着来
+
+```css
+.shop_navbar {
+  width: 1200px; /*设置导航栏宽度1200*/
+  margin: 0 auto; /*水平居中*/
+}
+
+.shop_navbar-left {
+  float: left; /*你去左边*/
+}
+
+.shop_navbar-list {
+  float: right; /*你去右边*/
+}
+```
+
+![](https://ww4.sinaimg.cn/large/006tKfTcly1fcuwveiqlqj30yu01z0sn.jpg)
+
+导航栏居中，左右两边的位置都搞定了。
+
+```css
+.shop_navbar-listItem {
+  float: left; /*「li是block元素，我们知道block元素是会独占一行的，如果要让它们在一行，那就要加上float」*/
+  padding-left: 10px; /*左边加点空间，不然太挤啦*/
+  padding-right: 10px; /*右边加点空间，不然太挤啦*/
+}
+
+.shop_navbar-spacer {
+  float: left; /*同样的，你也要float*/
+  width: 1px; /*宽度为1，就可以拿到当分隔符用了，哈哈*/
+  height: 12px; /*12px差不多，刚刚好*/
+  margin-top: 9px; /*调一下上边距*/
+  background: #ddd; /*分隔符的背景颜色*/
+}
+```
+
+![](https://ww4.sinaimg.cn/large/006tKfTcly1fcux3kajaaj30xy00zt8l.jpg)
+
+ok，几乎快完成了哈
+
+```css
+.navbar-wrap a {
+  color: #717171; /*文字的颜色*/
+  text-decoration: none; /*不要下划线啦，好丑*/
+}
+.navbar-wrap a:hover {
+  color: #C81623; /*鼠标一上去的时候，字体变成红色*/  
+}
+```
+
+![](https://ww1.sinaimg.cn/large/006tKfTcly1fcux4shoufj30y200ymx2.jpg)
+
+done！
+
+最终代码示例：[http://codepen.io/raimonfuns/pen/qRGMPX](http://codepen.io/raimonfuns/pen/qRGMPX)
+
+
+
+未完待续，敬请期待。如果你有什么建议，欢迎留言！
+
+------
+
+ps：如果教程对大家有帮助的话，希望能为「[小小食杂铺](https://fullstack.xinshengdaxue.com/works/201)」投上一票哈。

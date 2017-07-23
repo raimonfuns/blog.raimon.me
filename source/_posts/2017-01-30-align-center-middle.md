@@ -1,5 +1,5 @@
 ---
-title: 搞定所有居中布局！
+title: 布局解决方案之「居中布局」
 categories: CSS
 ---
 

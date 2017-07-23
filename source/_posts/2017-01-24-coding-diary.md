@@ -1,7 +1,7 @@
 
 ---
-title: 【全栈日记】1/24
-categories: Ruby on Rails全栈训练营
+title: 【ORID总结】1/24
+categories: 全栈营
 ---
 
 # Objective

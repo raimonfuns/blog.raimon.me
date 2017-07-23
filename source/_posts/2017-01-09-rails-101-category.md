@@ -1,6 +1,6 @@
 ---
 title: rails101 动作分解
-categories: Ruby on Rails全栈训练营
+categories: 全栈营
 ---
 
 ### bootstrap配置

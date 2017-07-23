@@ -1,6 +1,6 @@
 ---
 title: 【错误】在rails console中操作数据库报错
-categories: Ruby on Rails全栈训练营
+categories: 全栈营
 
 ---
 

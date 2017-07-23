@@ -1,7 +1,7 @@
 
 ---
 title: 【错误】切换页面，jquery的绑定事件会失效
-categories: Ruby on Rails全栈训练营
+categories: 全栈营
 ---
 
 ## 动作

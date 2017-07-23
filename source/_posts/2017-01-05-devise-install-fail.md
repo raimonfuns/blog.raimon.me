@@ -1,6 +1,6 @@
 ---
 title: 【错误】Could not find generator 'devise:install'
-categories: Ruby on Rails全栈训练营
+categories: 全栈营
 ---
 
 ### 动作

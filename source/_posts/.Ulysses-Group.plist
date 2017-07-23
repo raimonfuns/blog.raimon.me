@@ -736,12 +736,65 @@
 					<integer>95</integer>
 				</dict>
 			</dict>
+			<key>2017-01-30-align-center-middle.md</key>
+			<dict>
+				<key>lastModification</key>
+				<real>507714872.33294803</real>
+				<key>version</key>
+				<dict>
+					<key>fd545631f919d427684fd0c7f8fc656f2b19d9b276ea5e2aefcf66738b8d84df</key>
+					<integer>137</integer>
+				</dict>
+			</dict>
+			<key>2017-01-30-fullscreen-layout.md</key>
+			<dict>
+				<key>lastModification</key>
+				<real>507714872.33295</real>
+				<key>version</key>
+				<dict>
+					<key>fd545631f919d427684fd0c7f8fc656f2b19d9b276ea5e2aefcf66738b8d84df</key>
+					<integer>137</integer>
+				</dict>
+			</dict>
+			<key>2017-01-30-multi-column-layout.md</key>
+			<dict>
+				<key>lastModification</key>
+				<real>507714872.33294898</real>
+				<key>version</key>
+				<dict>
+					<key>fd545631f919d427684fd0c7f8fc656f2b19d9b276ea5e2aefcf66738b8d84df</key>
+					<integer>137</integer>
+				</dict>
+			</dict>
+			<key>2017-02-01-flex.md</key>
+			<dict>
+				<key>lastModification</key>
+				<real>507714872.33295</real>
+				<key>version</key>
+				<dict>
+					<key>fd545631f919d427684fd0c7f8fc656f2b19d9b276ea5e2aefcf66738b8d84df</key>
+					<integer>137</integer>
+				</dict>
+			</dict>
+			<key>2017-02-02-orid.md</key>
+			<dict>
+				<key>lastModification</key>
+				<real>507714884.84002501</real>
+				<key>version</key>
+				<dict>
+					<key>fd545631f919d427684fd0c7f8fc656f2b19d9b276ea5e2aefcf66738b8d84df</key>
+					<integer>138</integer>
+				</dict>
+			</dict>
 		</dict>
 		<key>sheetOrder</key>
 		<real>506877354.22922099</real>
 	</dict>
 	<key>sheetClusters</key>
 	<array>
+		<array>
+			<string>2017-02-02-orid.md</string>
+		</array>
 		<array>
 			<string>2017-01-26-xiaolai-fullstack-share.md</string>
 		</array>
@@ -961,6 +1014,18 @@
 		<array>
 			<string>2017-01-26-custom-form-error-tip.md</string>
 		</array>
+		<array>
+			<string>2017-01-30-align-center-middle.md</string>
+		</array>
+		<array>
+			<string>2017-01-30-multi-column-layout.md</string>
+		</array>
+		<array>
+			<string>2017-01-30-fullscreen-layout.md</string>
+		</array>
+		<array>
+			<string>2017-02-01-flex.md</string>
+		</array>
 	</array>
 	<key>sheetOrder</key>
 	<string>creationDate</string>
@@ -971,7 +1036,7 @@
 		<key>sheetClusters</key>
 		<dict>
 			<key>fd545631f919d427684fd0c7f8fc656f2b19d9b276ea5e2aefcf66738b8d84df</key>
-			<integer>135</integer>
+			<integer>142</integer>
 		</dict>
 		<key>sheetOrder</key>
 		<dict>

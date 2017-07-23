@@ -1,6 +1,6 @@
 ---
 title: 【教程】如何清空heroku上面的数据
-categories: Ruby on Rails全栈训练营
+categories: 全栈营
 ---
 
 当第一次把job-listing提交到heroku之后，运行`heroku run rake db:seed`，产生了10个publish工作和10个hidden工作。

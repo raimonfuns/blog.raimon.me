@@ -1,6 +1,6 @@
 ---
 title: 【错误】UnknownFormat
-categories: Ruby on Rails全栈训练营
+categories: 全栈营
 ---
 
 ### 动作

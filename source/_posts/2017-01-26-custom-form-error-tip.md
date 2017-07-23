@@ -1,6 +1,6 @@
 ---
 title: 【教程】自定义表单报错信息 + 限制薪水下限不能低于薪水上限
-categories: Ruby on Rails全栈训练营
+categories: 全栈营
 ---
 
 ## 如何自定义表单报错信息

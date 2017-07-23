@@ -1,6 +1,6 @@
 ---
-title: 【全栈日记】1/5
-categories: Ruby on Rails全栈训练营
+title: 【ORID总结】1/5
+categories: 全栈营
 tags: 用户故事
 ---
 

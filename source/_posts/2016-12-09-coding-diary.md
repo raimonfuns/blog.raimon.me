@@ -1,6 +1,6 @@
 ---
-title: 【全栈日记】2016/12/09
-categories: Ruby on Rails全栈训练营
+title: 【ORID总结】2016/12/09
+categories: 全栈营
 ---
 
 ## Objective
